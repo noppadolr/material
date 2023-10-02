@@ -120,13 +120,13 @@
         <!-- /Left Section -->
         <div class="d-none d-lg-flex col-lg-7 col-xl-8 align-items-center justify-content-center p-5 pb-2">
           <img
-            src="../../assets/img/illustrations/auth-login-illustration-light.png"
+            src="{{ asset('admin/assets/img/illustrations/auth-login-illustration-light.png') }}"
             class="auth-cover-illustration w-100"
             alt="auth-illustration"
             data-app-light-img="illustrations/auth-login-illustration-light.png"
             data-app-dark-img="illustrations/auth-login-illustration-dark.png" />
           <img
-            src="../../assets/img/illustrations/auth-cover-login-mask-light.png"
+            src="{{ asset('admin/assets/img/illustrations/auth-cover-login-mask-light.png') }}"
             class="authentication-image"
             alt="mask"
             data-app-light-img="illustrations/auth-cover-login-mask-light.png"
@@ -141,7 +141,8 @@
             <h4 class="mb-2">Welcome to Materialize! 👋</h4>
             <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
-            <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
+            {{--  <form id="formAuthentication" class="mb-3" action="index.html" method="POST">  --}}
+                <form id="" class="mb-3" action="index.html" method="POST">
               <div class="form-floating form-floating-outline mb-3">
                 <input
                   type="text"
