@@ -13,7 +13,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Login Cover - Pages | Materialize - Material Design HTML Admin Template</title>
+    <title>Login</title>
 
     <meta name="description" content="" />
 
@@ -113,7 +113,7 @@
             </svg>
           </span>
         </span>
-        <span class="app-brand-text demo text-heading fw-bold">Materialize</span>
+        <span class="app-brand-text demo text-heading fw-bold">HRMIS</span>
       </a>
       <!-- /Logo -->
       <div class="authentication-inner row m-0">
@@ -138,20 +138,22 @@
         <div
           class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg position-relative py-sm-5 px-4 py-4">
           <div class="w-px-400 mx-auto pt-5 pt-lg-0">
-            <h4 class="mb-2">Welcome to Materialize! 👋</h4>
+            <h4 class="mb-2">Welcome to HRMIS! 👋</h4>
             <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
             {{--  <form id="formAuthentication" class="mb-3" action="index.html" method="POST">  --}}
-                <form id="" class="mb-3" action="index.html" method="POST">
+                <form id="" class="mb-3" action="{{ route('admin.auth') }}" method="POST">
+                    @csrf
               <div class="form-floating form-floating-outline mb-3">
                 <input
                   type="text"
                   class="form-control"
                   id="email"
-                  name="email-username"
-                  placeholder="Enter your email or username"
+
+                  name="username"
+                  placeholder="Enter your username"
                   autofocus />
-                <label for="email">Email or Username</label>
+                <label for="email">Username</label>
               </div>
               <div class="mb-3">
                 <div class="form-password-toggle">
@@ -179,7 +181,7 @@
                   <span>Forgot Password?</span>
                 </a>
               </div>
-              <button class="btn btn-primary d-grid w-100">Sign in</button>
+              <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
             </form>
 
             <p class="text-center mt-2">
